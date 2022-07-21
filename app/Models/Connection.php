@@ -21,11 +21,8 @@ class Connection extends Model
             $hf_dbh = new PDO($hf_dsn);
             //echo "connexion effectuee";
             $hf_dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $res_select = $hf_dbh->prepare($sql);
-            //$res_select->execute();
-            //$output = $res_select->fetchAll(PDO::FETCH_ASSOC);
-            return $res_select;
-            var_dump($output);
+            $query= $hf_dbh->prepare($sql);
+            return $query;
         }catch (PDOException $e) {
             echo $e;
         }

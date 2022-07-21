@@ -20,5 +20,10 @@ use App\Http\Controllers\HistoriqueController;
 });*/
 //Route::get('/',[HistoriqueController::class,'index']);
 //Route::get('historiques/{$ref}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
-Route::get('front/historique/{ref}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
-Route::get('/{ref?}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
+//Route::get('front/historique/{ref}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
+//Route::get('/{ref?}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
+Route::controller(HistoriqueController::class)->group(function (){
+    Route::get('/','index');
+    Route::get('/Mouvement','add')->name("Mouvement.add");
+    Route::get('front/historique/{ref}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
+});

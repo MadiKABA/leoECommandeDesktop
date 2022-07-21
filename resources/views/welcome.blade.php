@@ -11,30 +11,10 @@
     <link rel="stylesheet" type="text/css" href="{{ asset('css/style.css') }}">
 </head>
 <body>
-    <nav class="navbar navbar-expend d-flex flex-column align-item-satrt" id="sidebar">
-        <a href="#" class="navbar-brand text-light mt-5">
-            <div class="display-5 fw-bold">KABA</div>
-        </a>
-        <ul class="navbar-nav d-flex flex-columnmt-5 w-100">
-            <li class="nav-item w-100">
-                <a href="#" class="nva-link text-light">Home</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="#" class="nva-link text-light">Home</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="#" class="nva-link text-light">Home</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="#" class="nva-link text-light">Home</a>
-            </li>
-            <li class="nav-item w-100">
-                <a href="#" class="nva-link text-light">Home</a>
-            </li>
-        </ul>
-    </nav>
     <div class="container my-5">
             <div class="d-flex justify-content-center">
+                <a style="color:#4ecdc4" class="btn fw-bold fs-4" href="http://127.0.0.1:8000/">All</a>
+                <a style="color:#4ecdc4" class="btn fw-bold fs-4" href="{{route('Mouvement.add')}}}" >Add</a>
                 @foreach($references as $reference)
                     <a style="color:#4ecdc4" class="btn fw-bold fs-4" href="{{route('historique.getByReference',['ref'=>$reference->ref_mvt])}}">{{$reference->ref_mvt}}</a>
                 @endforeach
