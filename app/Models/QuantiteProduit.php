@@ -34,8 +34,9 @@ class QuantiteProduit extends Model
     {
         //dd(false);
         $date_mvt_initial = date('YmdHis',strtotime(NOW()));
-        $sql="UPDATE data_QTEPROD SET QTE_STOCK=QTE_STOCK=+$qteStock,MVT_DERNIER=? WHERE PRCLEUNIK=?";
+        $sql="UPDATE data_QTEPROD SET QTE_STOCK=QTE_STOCK+$qteStock,MVT_DERNIER=? WHERE PRCLEUNIK=?";
         $resultat = Connection::connection($sql);
         $resultat->execute([$date_mvt_initial,$cleProd]);
     }
+
 }
