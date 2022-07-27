@@ -3,7 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\MouvementController;
 use App\Http\Controllers\HistoriqueController;
-
+use App\Http\Controllers\CommandeController;
+use App\Http\Livewire\welcome;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -22,8 +23,9 @@ use App\Http\Controllers\HistoriqueController;
 //Route::get('historiques/{$ref}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
 //Route::get('front/historique/{ref}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
 //Route::get('/{ref?}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
-Route::controller(HistoriqueController::class)->group(function (){
-    Route::get('/','index');
+/*Route::controller(HistoriqueController::class)->group(function (){
+    //Route::get('/','index');
     Route::get('/Mouvement','add')->name("Mouvement.add");
     Route::get('front/historique/{ref}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
-});
+});*/
+Route::get('/',[CommandeController::class,'index']);
