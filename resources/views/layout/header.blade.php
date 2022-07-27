@@ -20,11 +20,11 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
     <!-- Styles -->
 
-    <link href="css/themify-icons.css" rel="stylesheet">
-    <link href="css/sidebar.css" rel="stylesheet">
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/helper.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="{{asset('css/themify-icons.css')}}" rel="stylesheet">
+    <link href="{{asset("css/sidebar.css")}}" rel="stylesheet">
+    <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/helper.css')}}" rel="stylesheet">
+    <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
 
 <body>
@@ -39,7 +39,7 @@
 
 
                 <li class="label">Apps</li>
-                <li><a class="sidebar-sub-toggle"><i class="bi bi-cart4"></i>Commandes</a>
+                <li><a href="/commandes" ><i class="bi bi-cart4"></i>Commandes</a>
 
                 </li>
                 <li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> Icons <span

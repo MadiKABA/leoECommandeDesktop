@@ -42,4 +42,18 @@ class Commande extends Model
         $resultat->execute();
         return $resultat->fetchAll(PDO::FETCH_OBJ);
     }
+
+    public static  function showCommande($id){
+        $sql="SELECT * FROM data_LigneCdeFou WHERE NumCommande=$id";
+        $resultat = Connection::connection($sql);
+        $resultat->execute();
+        return $resultat->fetchAll(PDO::FETCH_OBJ);
+    }
+
+    public static  function getCommande(){
+        $sql="SELECT * FROM data_CdeFou";
+        $resultat = Connection::connection($sql);
+        $resultat->execute();
+        return $resultat->fetchAll(PDO::FETCH_OBJ);
+    }
 }

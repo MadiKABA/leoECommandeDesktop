@@ -29,3 +29,5 @@ use App\Http\Livewire\welcome;
     Route::get('front/historique/{ref}',[HistoriqueController::class,'getByReference'])->name("historique.getByReference");
 });*/
 Route::get('/',[CommandeController::class,'index']);
+Route::get('/commandes',[CommandeController::class,'index'])->name("commande.index");
+Route::get('/commande/{id}',[CommandeController::class,'show'])->name("commande.show");
