@@ -44,14 +44,16 @@ class Commande extends Model
     }
 
     public static  function showCommande($id){
-        $sql="SELECT * FROM data_LigneCdeFou WHERE NumCommande=$id";
+        $sql="SELECT * FROM data_LigneCdeFou,data_QTEPROD WHERE NumCommande=$id
+                                              AND data_QTEPROD.PRCLEUNIK=data_LigneCdeFou.PRCLEUNIK";
         $resultat = Connection::connection($sql);
         $resultat->execute();
         return $resultat->fetchAll(PDO::FETCH_OBJ);
     }
 
     public static  function getCommande(){
-        $sql="SELECT * FROM data_CdeFou";
+        $sql="SELECT * FROM data_CdeFou,data_FOURNISSEURS
+                             WHERE data_CdeFou.NumFournisseur=data_FOURNISSEURS.NumFournisseur";
         $resultat = Connection::connection($sql);
         $resultat->execute();
         return $resultat->fetchAll(PDO::FETCH_OBJ);

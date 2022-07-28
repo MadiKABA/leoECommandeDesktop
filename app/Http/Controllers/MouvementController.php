@@ -14,10 +14,8 @@ class MouvementController extends Controller
      */
     public function index()
     {
-        $references=Mouvement::getReferemce();
-        //dd($mouvements);
-        return view('welcome',compact('references'));
-        //return response()->json($mouvements);
+        $mouvements=Mouvement::getALL();
+        return view('mouvements.list',compact('mouvements'));
     }
 
     public function getByReference()

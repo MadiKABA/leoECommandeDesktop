@@ -13,6 +13,9 @@
 <!-- sidebar -->
 
 <script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/bootstrap-table-fr-FR.min.js')}}"></script>
+<script src="{{asset('js/bootstrap-table.min.js')}}"></script>
+<script src="{{asset('js/fontawesome.min.js')}}"></script>
 <script src="{{asset('js/scripts.js"')}}></script>
 <!-- bootstrap -->
 <!-- scripit init-->

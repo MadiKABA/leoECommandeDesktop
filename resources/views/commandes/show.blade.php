@@ -1,16 +1,30 @@
 @extends('layout.layout')
 @section('content')
     `<div class="container my-5">
-        <h2>Liste des commandes</h2>
-            <div class="row">
-                @foreach($ligneCommandes as $produit)
-                    <div class="shadow-sm p-3 mb-5 bg-body rounded col-md-4">
-                        While shadows on components are disabled by default in Bootstrap and can be enabled via $enable-shadows,
-                        you can also quickly add or remove a shadow with our box-shadow utility classes.
-                        Includes support for .shadow-none and three default sizes (which have associated variables to match).
-                    </div>
-                @endforeach
-            </div>
-
+        <h2 class="text-center">Detail commandes</h2>
+        <table class="table" data-toggle="table" data-search="true" data-show-columns="true" data-pagination="true">
+            <thead class="">
+            <tr>
+                <th scope="col">Produit</th>
+                <th scope="col">Quantite</th>
+                <th scope="col">Remise</th>
+                <th scope="col">QuantiteLivree</th>
+                <th scope="col">PrixAchat</th>
+                <th scope="col">Quantite Stock</th>
+            </tr>
+            </thead>
+            <tbody>
+            @foreach($ligneCommandes as $produit)
+                <tr>
+                    <th scope="row">{{$produit->LibProd}}</th>
+                    <th scope="row">{{$produit->Quantite}}</th>
+                    <th scope="row">{{$produit->Remise}}</th>
+                    <th scope="row">{{$produit->Qte_Livree}}</th>
+                    <th scope="row">{{$produit->prix_achat}}</th>
+                    <th scope="row">{{$produit->QTE_STOCK}}</th>
+                </tr>
+            @endforeach
+            </tbody>
+        </table>
         <div>
 @endsection

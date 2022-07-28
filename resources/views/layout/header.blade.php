@@ -23,6 +23,8 @@
     <link href="{{asset('css/themify-icons.css')}}" rel="stylesheet">
     <link href="{{asset("css/sidebar.css")}}" rel="stylesheet">
     <link href="{{asset('css/bootstrap.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/bootstrap-table.min.css')}}" rel="stylesheet">
+    <link href="{{asset('css/fontawesome.min.css')}}" rel="stylesheet">
     <link href="{{asset('css/helper.css')}}" rel="stylesheet">
     <link href="{{asset('css/style.css')}}" rel="stylesheet">
 </head>
@@ -42,13 +44,12 @@
                 <li><a href="/commandes" ><i class="bi bi-cart4"></i>Commandes</a>
 
                 </li>
-                <li><a class="sidebar-sub-toggle"><i class="ti-heart"></i> Icons <span
-                            class="sidebar-collapse-icon ti-angle-down"></span></a>
+                <li><a href="{{route('commande.saveCommande')}}"><i class="bi bi-cart-plus-fill"></i>Valider Commande</a>
                     <ul>
                         <li><a href="font-themify.html">Themify</a></li>
                     </ul>
                 </li>
-                <li><a href="../documentation/index.html"><i class="ti-file"></i> Documentation</a></li>
+                <li><a href="{{route('mouvements.index')}}"><i class="fa-solid fa-clock-rotate-left"></i> Mouvement</a></li>
                 <li><a><i class="bi bi-box-arrow-in-left"></i>Logout</a></li>
             </ul>
         </div>
