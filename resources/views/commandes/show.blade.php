@@ -5,7 +5,7 @@
         <table class="table" data-toggle="table" data-search="true" data-show-columns="true" data-pagination="true">
             <thead class="">
             <tr>
-                <th scope="col">Produit</th>
+                <th scope="col" data-sortable="true">Produit</th>
                 <th scope="col">Quantite</th>
                 <th scope="col">Remise</th>
                 <th scope="col">QuantiteLivree</th>

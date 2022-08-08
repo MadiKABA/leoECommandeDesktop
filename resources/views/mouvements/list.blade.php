@@ -1,7 +1,7 @@
 @extends('layout.layout')
 @section('content')
 <div class="container my-5">
-
+    <h2>Historique des Entrees Stock</h2>
     <table class="table" data-toggle="table" data-search="true" data-show-columns="true" data-pagination="true">
         <thead class="">
         <tr>
